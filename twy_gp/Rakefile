@@ -1,0 +1,9 @@
+ENV["SINATRA_ENV"] ||= "development"
+
+require_relative './config/environment'
+require 'sinatra/activerecord/rake'
+
+desc "Enters a console session with all the DB stuff loaded"
+task :console do
+    binding.pry
+end
